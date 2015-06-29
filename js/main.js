@@ -60,46 +60,15 @@ require(["jquery","underscore","backbone","marionette","bootstrap"],function($,_
 	});
 	
 	var MenuView = Backbone.Marionette.ItemView.extend({
-		initialize : function(){
-		},
 		template:"#menu_view_template",
-		events:{			'click li#home': 'goHome',
-			'click li#somos': 'goSomos',
-			'click li#contacto': 'goContacto',
-			'click li#que_ha': 'goQue_ha'
+		events:{
+			"click li#somos":"goSomos"
 		},
-		goHome: function(){
-			ctrl.home();
-			this._removeMenuSelectedClass();
-			$('#home a').addClass("selected").find("span").addClass("selected");
-
-		},
-		goSomos: function(){
-			ctrl.somos();
-			this._removeMenuSelectedClass();
-			$('#somos a').addClass("selected").find("span").addClass("selected");
-
-	
-		},
-		goContacto: function(event){
-			event.stopPropagation();
-			ctrl.contacto();	
-			this._removeMenuSelectedClass();
-			$('#contacto a').addClass("selected").find("span").addClass("selected");
-
-	
-		},
-		goQue_ha: function(){
-			ctrl.que_ha();
-			this._removeMenuSelectedClass();
-			$('#que_ha a').addClass("selected").find("span").addClass("selected");
-
-
-		},
-		_removeMenuSelectedClass:function(){
-			$(".nav-justified>li a").removeClass("selected").find("span").removeClass("selected");
+		goSomos:function(){
 			
+			myRouter.navigate("somos",true);
 		}
+
 	});
 
 	var HomeView = Backbone.Marionette.ItemView.extend({
@@ -143,17 +112,30 @@ require(["jquery","underscore","backbone","marionette","bootstrap"],function($,_
 	var MyController = Marionette.Controller.extend({
 		home: function() {
 			layout.getRegion("content").show(new HomeView());
+			this._removeMenuSelectedClass();
+			$('#home a').addClass("selected").find("span").addClass("selected");
 		},
 		somos: function() {
 			layout.getRegion("content").show(new SomosView());
+			this._removeMenuSelectedClass();
+			$('#somos a').addClass("selected").find("span").addClass("selected");
 		},
 		contacto : function(){
 			layout.getRegion("content").show(new ContactoView());
+			this._removeMenuSelectedClass();
+			$('#contacto a').addClass("selected").find("span").addClass("selected");
 		},
 		que_ha : function(){
 
 			layout.getRegion("content").show(new Que_haView());  
-		}	
+			this._removeMenuSelectedClass();
+			$('#que_ha a').addClass("selected").find("span").addClass("selected");
+		},
+		_removeMenuSelectedClass:function(){
+			$(".nav-justified>li a").removeClass("selected").find("span").removeClass("selected");
+			
+		}
+	
 	});
 			
 		
@@ -165,17 +147,14 @@ require(["jquery","underscore","backbone","marionette","bootstrap"],function($,_
 	layout.getRegion("foot").show(fView);
 	//var myRouter = new MyRouter({controller: ctrl});
 	var ctrl = new MyController(); 
-	var myRouter = new Marionette.AppRouter({
+	myRouter = new Marionette.AppRouter({
 		controller: ctrl,
 		appRoutes: {
-			"": "home"
-	  	},
-		routes:{
+			"": "home",
 			"somos": "somos",
 			"contacto": "contacto",
 			"que_ha" : "que_ha"
-		},
-		que_ha : function(){alert("hola p")}	
+	  	}
 	});
 	Backbone.history.start();
 });
