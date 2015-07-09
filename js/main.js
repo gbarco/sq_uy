@@ -25,15 +25,12 @@ require.config({
 		}
 	}
 });
-
 require(["jquery", "underscore", "backbone", "marionette", "bootstrap"], function($, _, Backbone, Marionette, Bootstrap) {
 	var MyApp = new Marionette.Application();
-
 	var AppLayoutView = Backbone.Marionette.LayoutView.extend({
 		el: "#main_layout",
 		template: "#layout_view_template",
 		initialize: function() {
-
 		},
 		regions: {
 			head: "#head",
@@ -42,17 +39,12 @@ require(["jquery", "underscore", "backbone", "marionette", "bootstrap"], functio
 			foot: "#foot"
 		},
 		events: {},
-		hola: function() {
-			alert('Hola');
-		},
 	});
-
 	var HeadView = Backbone.Marionette.ItemView.extend({
 		initialize: function() {},
 		template: "#head_view_template",
 		events: {}
 	});
-
 	var MenuView = Backbone.Marionette.ItemView.extend({
 		template: "#menu_view_template",
 		events: {
@@ -62,31 +54,25 @@ require(["jquery", "underscore", "backbone", "marionette", "bootstrap"], functio
 			myRouter.navigate("somos", true);
 		}
 	});
-
 	var HomeView = Backbone.Marionette.ItemView.extend({
 		initialize: function() {},
 		template: "#home_view_template",
 		events: {}
 	});
-
 	var SomosView = Backbone.Marionette.ItemView.extend({
 		template: "#somos_view_template"
 	});
-
 	var Que_haView = Backbone.Marionette.ItemView.extend({
 		template: "#que_ha_view_template"
 	});
-
 	var ContactoView = Backbone.Marionette.ItemView.extend({
 		template: "#contacto_view_template"
 	});
-
 	var FootView = Backbone.Marionette.ItemView.extend({
 		initialize: function() {},
 		template: "#foot_view_template",
 		events: {}
 	});
-
 	layout = new AppLayoutView();
 	//Paginas Generales
 	hView = new HeadView();
@@ -94,7 +80,6 @@ require(["jquery", "underscore", "backbone", "marionette", "bootstrap"], functio
 	fView = new FootView();
 	//Paginas particulares
 	homeView = new HomeView();
-
 	var MyController = Marionette.Controller.extend({
 		home: function() {
 			layout.getRegion("content").show(new HomeView());
@@ -112,18 +97,14 @@ require(["jquery", "underscore", "backbone", "marionette", "bootstrap"], functio
 			$('#contacto a').addClass("selected").find("span").addClass("selected");
 		},
 		que_ha: function() {
-
 			layout.getRegion("content").show(new Que_haView());
 			this._removeMenuSelectedClass();
 			$('#que_ha a').addClass("selected").find("span").addClass("selected");
 		},
 		_removeMenuSelectedClass: function() {
 			$(".nav-justified>li a").removeClass("selected").find("span").removeClass("selected");
-
 		}
-
 	});
-
 	//Render inicial
 	layout.render()
 	layout.getRegion("head").show(hView);
