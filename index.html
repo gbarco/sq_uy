@@ -1,27 +1,23 @@
 <DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="externals/js/require.js" data-main="js/main" ></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.18/require.min.js" data-main="js/main" ></script>
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css"></link>
 	<meta charset="UTF-8">
 </head>
 <body>
-
 	<script id="layout_view_template" type="text/template">
 		<div id="allLayout" class="container">
-  			<div id="head"></div>
-    	 		<div id="menu"></div>
+			<div id="head"></div>
+			<div id="menu"></div>
 			<div id="content"></div>
 			<div id="foot"></div>
 		</div>
 	</script>
-
 	<script id="head_view_template" type="text/template">
-	       <div><img src="images/sq_logo.png"></div>
+	  <div><img src="images/sq_logo.png"></div>
 	</script>
-
-
 	<script id="menu_view_template" type="text/template">
 		<div>
 			<ul class="nav nav-justified">
@@ -33,157 +29,141 @@
 			</ul>
 		</div> 
 	</script>
-
-	
 	<script id="home_view_template" type="text/template">
 		<div class="homePage">
 			<div class="homePageText">
 				<p style="text-align: center; font-size: 36px;" ><span style="font-size:36px;"><span style="font-weight:bold;"><span style="color:#EB9411;">SQ Admobile</span></span></span><span style="font-size:24px;"><span> </span></span></p>
-
 				<p style="text-align: center; font-size: 20px;" ><span style="font-size:20px;"><span>Plataforma publicitaria </span></span></p>
-
 				<p style="text-align: center; font-size: 20px;" ><span style="font-size:20px;"><span>innovadora&nbsp;e inteligente.</span></span></p>
-
 				<p style="text-align: center;" >&nbsp;</p>
-
 				<p style="text-align: center;" ><span>Permite a los anunciantes llegar a dispositivos móviles (celulares, tablets, laptops) de consumidores con publicidad personalizada y microsegmentada desde medios tradicionales, puntos de venta y distintos puntos de acceso wifi.</span></p> <span class="yellowLine"><span>
 			</div>
 		</div>
 	</script>
-
-
 	<script id="somos_view_template" type="text/template">
-<div class="somos">
-	<div class="row">
-		<span class="qSomos">Quienes Somos</span>
-		<div class="col-md-3"></div>
-		<div class="col-md-9">
-			<span class="titulo cursiva">
-				"Ofrecer contenidos dinámicos y personalizados desde medios tradicionales fue unos de los primeros desafíos..."
-			</span>	
-			<span class="subtitulo">
-				<h4>Tenemos espíritu emprendedor, creatividad, innovación y pasión por lo que hacemos.</h4>
-			</span>
+		<div class="somos">
 			<div class="row">
+				<span class="qSomos">Quienes Somos</span>
 				<div class="col-md-3"></div>
-				<div class="col-md-3">
-					<span>
-						<img alt="" style="width: 148px; height: 149px; object-fit: cover;" src="images/pablo_trysker.jpg"/>
-						<div>
-							<span style="color:rgba(233, 153, 31, 1)"><p><h4><strong>Pablo Trysker</strong></h4></span>
-							<p><h4>Director</h4>
-							<a href="http://uy.linkedin.com/in/pablotrysker" target="_blank" id="LnkBr0-6j9i0o6mlink">
-								<div style="width:16px;height:16px;display:inline;"><img alt="" style="width:16px;height:16px;object-fit:cover;" src="images/linkedin.png"></div>
-							</a>
-							<a href="https://twitter.com/pablotrysker" target="_blank">
-								<div style="width:16px;height:16px;display:inline"><img alt="" style="width:16px;height:16px;object-fit:cover;" src="images/twitter.png"></div>
-							</a>	
-						</div>	
+				<div class="col-md-9">
+					<span class="titulo cursiva">
+						"Ofrecer contenidos dinámicos y personalizados desde medios tradicionales fue unos de los primeros desafíos..."
+					</span>	
+					<span class="subtitulo">
+						<h4>Tenemos espíritu emprendedor, creatividad, innovación y pasión por lo que hacemos.</h4>
 					</span>
-				</div>
-				<div class="col-md-4">
-					<span>
-						<img alt="" style="width: 146px; height: 153px; object-fit: cover;" src="images/gonzalo_barco.jpg"/>			
-						<div>
-							<span style="color:rgba(233, 153, 31, 1)"><p><h4><strong>Gonzalo Barco</strong></h4></span>
-							<p><h4>Head of Archicteture</h4>
-							<a href="http://uy.linkedin.com/in/gonzalobarco" target="_blank">
-								<div style="width:16px;height:16px;display:inline;"><img alt="" style="width:16px;height:16px;object-fit:cover;" src="images/linkedin.png"></div>
-							</a>
-						</div>	
-					</span>
-				</div>
-			</div>
-			<div class="separadorHorizontal"></div>	
-			<div class="row">
-				<div class="col-md-3"></div>
-				<div class="col-md-7">
-					<span style="text-align:justify;">
-						<p>Somos un equipo con más de 15 años de experiencia en publicidad exterior, planificación de medios y ventas corporativas en empresas multinacionales. 
-
-						<p>Un equipo con visión de futuro, que trabaja dia a dia ofreciendo innovacion y creatividad aplicada para el mercado publicitario.
-					</span>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-	</script>
-
-	<script id="contacto_view_template" type="text/template">
-
-	<div class="somos">
-		<div class="row">
-			<span class="qSomos">Contacto</span>
-		</div>
-		<div class="row">
-
-			<div class="banderas col-md-6">
-				<div class="row">
-					<span class="col-md-6" id="bandera_uruguay"><img alt="" style="width: 85px; height: 85px; object-fit: cover;" src="images/uruball.jpg" ></span>
-					<div class="col-md-6">
-						<div><h4>Contacto comercial</div>
-						<div><h4>cel. 097 113270</div>
+					<div class="row">
+						<div class="col-md-3"></div>
+						<div class="col-md-3">
+							<span>
+								<img alt="" style="width: 148px; height: 149px; object-fit: cover;" src="images/pablo_trysker.jpg"/>
+								<div>
+									<span style="color:rgba(233, 153, 31, 1)"><p><h4><strong>Pablo Trysker</strong></h4></span>
+									<p><h4>Director</h4>
+									<a href="http://uy.linkedin.com/in/pablotrysker" target="_blank" id="LnkBr0-6j9i0o6mlink">
+										<div style="width:16px;height:16px;display:inline;"><img alt="" style="width:16px;height:16px;object-fit:cover;" src="images/linkedin.png"></div>
+									</a>
+									<a href="https://twitter.com/pablotrysker" target="_blank">
+										<div style="width:16px;height:16px;display:inline"><img alt="" style="width:16px;height:16px;object-fit:cover;" src="images/twitter.png"></div>
+									</a>	
+								</div>	
+							</span>
+						</div>
+						<div class="col-md-4">
+							<span>
+								<img alt="" style="width: 146px; height: 153px; object-fit: cover;" src="images/gonzalo_barco.jpg"/>			
+								<div>
+									<span style="color:rgba(233, 153, 31, 1)"><p><h4><strong>Gonzalo Barco</strong></h4></span>
+									<p><h4>Head of Archicteture</h4>
+									<a href="http://uy.linkedin.com/in/gonzalobarco" target="_blank">
+										<div style="width:16px;height:16px;display:inline;"><img alt="" style="width:16px;height:16px;object-fit:cover;" src="images/linkedin.png"></div>
+									</a>
+								</div>	
+							</span>
+						</div>
+					</div>
+					<div class="separadorHorizontal"></div>	
+					<div class="row">
+						<div class="col-md-3"></div>
+						<div class="col-md-7">
+							<span style="text-align:justify;">
+								<p>Somos un equipo con más de 15 años de experiencia en publicidad exterior, planificación de medios y ventas corporativas en empresas multinacionales. 
+		
+								<p>Un equipo con visión de futuro, que trabaja dia a dia ofreciendo innovacion y creatividad aplicada para el mercado publicitario.
+							</span>
+						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="row">
-						<div class="col-md-6">	
-							<span id="bandera_argentina"><img alt="" style="width: 85px; height: 85px; object-fit: cover;" src="images/argball.jpg" ></span>
-							<span id="bandera_brasil"><img alt="" style="width: 85px; height: 85px; object-fit: cover;" src="images/braball.png" ></span>
-						</div>
-						<div class="col-md-6">
-        	                                	<div><h4>Contacto comercial</div>
-                	                        	<div><h4>cel. +5411 6961 7700</div>
-						</div>
-	                                </div>
-				</div>
 			</div>
-			<div class="col-md-6">
-				<div >
-						<iframe src="http://static.parastorage.com/services/santa/1.550.37/static/external/googleMap.html?address=Tiburcio%20Gomez%201330%2C%20Montevideo%2C%20Uruguay&amp;addressInfo=SQ%20AdMobile&amp;mapType=TERRAIN&amp;mapInteractive=true&amp;showZoom=true&amp;showPosition=true&amp;showStreetView=true&amp;showMapType=true&amp;lat=-34.8966279&amp;long=-56.13699600000001" width="100%" height="80%" frameborder="1" scrolling="no" ></iframe>
-				</div>
-			</div>
-
 		</div>
-		<div class="row">
-			<div class="col-md-3">
+	</script>
+	<script id="contacto_view_template" type="text/template">
+		<div class="somos">
+			<div class="row">
+				<span class="qSomos">Contacto</span>
 			</div>
-		<div class="formulario_email col-md-9">
-				<h4>Contacto vía email</h4>
-				<div class="yellowLine" style="marging-left:-10px;"></div>
-				<form action="" method="get" id="envioMail">
+			<div class="row">
+				<div class="banderas col-md-6">
 					<div class="row">
-						<div class="col-md-4">
-							<div class="row">
-								<input type="text" name="nombre" class="form-control col-md-12" placeholder="Nombre" aria-describedby="sizing-addon1">
-							</div>	
-							<div class="row">
-								<input type="text" name="email" class="form-control col-md-12" placeholder="Email" aria-describedby="sizing-addon1">
-							</div>	
-							<div class="row">
-								<input type="text" name="telefono" class="form-control col-md-12" placeholder="Telefono" aria-describedby="sizing-addon1">
+						<span class="col-md-6" id="bandera_uruguay"><img alt="" style="width: 85px; height: 85px; object-fit: cover;" src="images/uruball.jpg" ></span>
+						<div class="col-md-6">
+							<div><h4>Contacto comercial</div>
+							<div><h4>cel. 097 113270</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="row">
+							<div class="col-md-6">	
+								<span id="bandera_argentina"><img alt="" style="width: 85px; height: 85px; object-fit: cover;" src="images/argball.jpg" ></span>
+								<span id="bandera_brasil"><img alt="" style="width: 85px; height: 85px; object-fit: cover;" src="images/braball.png" ></span>
+							</div>
+							<div class="col-md-6">
+								<div><h4>Contacto comercial</div>
+								<div><h4>cel. +5411 6961 7700</div>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<textarea class="form-control col-md-12" placeholder="Mensaje" rows="4" cols="50"></textarea>					
-						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-6"></div>
-						<div class="col-md-2">
-							<button type="submit" class="form-control btn btn-primary" form="envioMail" value="submit">Envíar</button>	
+				</div>
+				<div class="col-md-6">
+					<div >
+						<iframe src="http://static.parastorage.com/services/santa/1.550.37/static/external/googleMap.html?address=Tiburcio%20Gomez%201330%2C%20Montevideo%2C%20Uruguay&amp;addressInfo=SQ%20AdMobile&amp;mapType=TERRAIN&amp;mapInteractive=true&amp;showZoom=true&amp;showPosition=true&amp;showStreetView=true&amp;showMapType=true&amp;lat=-34.8966279&amp;long=-56.13699600000001" width="100%" height="80%" frameborder="1" scrolling="no" ></iframe>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="formulario_email col-md-9">
+					<h4>Contacto vía email</h4>
+					<div class="yellowLine" style="marging-left:-10px;"></div>
+					<form action="" method="get" id="envioMail">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="row">
+									<input type="text" name="nombre" class="form-control col-md-12" placeholder="Nombre" aria-describedby="sizing-addon1">
+								</div>	
+								<div class="row">
+									<input type="text" name="email" class="form-control col-md-12" placeholder="Email" aria-describedby="sizing-addon1">
+								</div>	
+								<div class="row">
+									<input type="text" name="telefono" class="form-control col-md-12" placeholder="Telefono" aria-describedby="sizing-addon1">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<textarea class="form-control col-md-12" placeholder="Mensaje" rows="4" cols="50"></textarea>					
+							</div>
 						</div>
-					</div>	
-				</form>	
+						<div class="row">
+							<div class="col-md-6"></div>
+							<div class="col-md-2">
+								<button type="submit" class="form-control btn btn-primary" form="envioMail" value="submit">Envíar</button>	
+							</div>
+						</div>	
+					</form>	
+				</div>
 			</div>
 		</div>
-	</div>
-
 	</script>
-
 	<script id="que_ha_view_template" type="text/template">
-		
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-9">
@@ -191,13 +171,11 @@
 				<div class="yellowLine"></div>
 				<div>
 				<p>SQ AdMobile es una plataforma publicitaria innovadora e inteligente que vehiculiza público desde medios tradicionales y puntos wifi a una experiencia Mobile, ofreciendo contenido personalizado, dinámico y microsegmentado. 
-				
 				<p>La plataforma trabaja generando una nueva unidad de negocios, monetizando la segunda pantalla y potenciando de esta forma al medio.
 Desarrollamos una herramienta que potencia la inversión de nuestros clientes en medios tradicionales.
 				</div>
 				<b>Conectamos el mundo offline con el mundo online, generando inventario mobile,
 llegando a los consumidores en momentos claves del proceso de decisión de compra.</b>
-
 			</div>
 		</div>
 		<div class="row">
@@ -206,30 +184,21 @@ llegando a los consumidores en momentos claves del proceso de decisión de compr
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-9">
-
 				<div><h4>SQ Wifi</h4></div>
 				<div class="yellowLine"></div>
 				<div>
-
 					<p>SQ Wifi permite ofrecer productos y/o servicios generando promociones o acciones de fidelización de clientes, monetizar el servicio vendiendo los espacios publicitarios como un medio y recoger información de la interacción de los usuarios con la plataforma para Business Inteligence.
- 
-<p>SQ Wifi es una herramienta publicitaria, de marketing y de medición. 
-<i>Marketing :</i> esta permite realizar promociones, generar cupones de descuento digitales, fidelizar clientes, detectando concurrencia en un período de tiempo, realizar acciones de venta caliente.
- 
-<p><i>Publicitaria:</i> ofrece en los moviles de los consumidores publicidad personalizada, segmenta al público objetivo (por perfil: edad y sexo), utiliza contenido dinámico (por día u horarios) y multiplexa espacios de venta a distintos anunciantes.
- 
-<p><i>Medición:</i> captura y procesa datos estadísticos, permite conocer el perfil de los consumidores, conocer la habitualidad de los consumidores, conocer hábitos de consumo y traslado dentro de un espacio.
+					<p>SQ Wifi es una herramienta publicitaria, de marketing y de medición. 
+					<i>Marketing :</i> esta permite realizar promociones, generar cupones de descuento digitales, fidelizar clientes, detectando concurrencia en un período de tiempo, realizar acciones de venta caliente.
+					<p><i>Publicitaria:</i> ofrece en los moviles de los consumidores publicidad personalizada, segmenta al público objetivo (por perfil: edad y sexo), utiliza contenido dinámico (por día u horarios) y multiplexa espacios de venta a distintos anunciantes.
+					<p><i>Medición:</i> captura y procesa datos estadísticos, permite conocer el perfil de los consumidores, conocer la habitualidad de los consumidores, conocer hábitos de consumo y traslado dentro de un espacio.
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-7">
-				
-	
-				<iframe height="65%" width="100%" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/EFktVgl8U1Y?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.1.1.$SITE_PAGES.$cee5.1.$i2hxibfo.2.0"></iframe>
-				
-			
+				<iframe height="auto" width="100%" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/EFktVgl8U1Y?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.1.1.$SITE_PAGES.$cee5.1.$i2hxibfo.2.0"></iframe>
 			</div>
 		</div>
 		<div class="separadorHorizontal"></div>	
@@ -239,11 +208,9 @@ llegando a los consumidores en momentos claves del proceso de decisión de compr
 				<div><h4>SQ Tv</h4></div>
 				<div class="yellowLine"></div>
 				<div>
-					<p>SQ Tv , permite entre otras posibilidades suplantar el uso de sms como medio de interacción con el público, en encuestas, búsquedas de opinión o votaciones. 
- 
+					<p>SQ Tv, permite entre otras posibilidades suplantar el uso de sms como medio de interacción con el público, en encuestas, búsquedas de opinión o votaciones. 
 					<p>El público participa en forma gratuita de la interacción sin costo, recibiendo un contenido ó impacto publicitario personalizado según su perfil, geolocalización u opinión.
 					<p>Son los anunciantes que quieren llegar a los móviles de su público objetivo quienes abonan solo por los contactos efectivos que logren. 
- 
 					<p>Para la producción o medio surge la posibilidad de aprovechamiento eficiente del canal de comunicación, no sólo a partir de la monetización, sino a través de la información que se genera de la interacción de los usuarios con la plataforma pudiendo entre otras cosas realizar medición de audiencia por perfiles.
 					<p>Probá esta DEMO con tu móvil
 				</div>
@@ -252,30 +219,28 @@ llegando a los consumidores en momentos claves del proceso de decisión de compr
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-7">
-				<iframe height="65%" width="100%" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/VvJUE6QedSc?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.1.1.$SITE_PAGES.$cee5.1.$i2hzlwbu.2.0"></iframe>
+				<iframe height="auto" width="100%" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/VvJUE6QedSc?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.1.1.$SITE_PAGES.$cee5.1.$i2hzlwbu.2.0"></iframe>
 			</div>
 		</div>	
-
 		<div class="separadorHorizontal"></div>	
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-9">
-				<div><h4>SQ Pqd</h4></div>
+				<div><h4>SQ Pdv</h4></div>
 				<div class="yellowLine"></div>
 				<div>
 					<p>Brindamos soluciones a medida para puntos de venta y grandes superficies, siempre utilizando el móvil como medio para personalizar contenidos y generar efectiva comunicación directa.
 					<p>Pudiendo de esta manera realizar todo tipo de acciones de marketing, programa de fidelización y lanzar acciones que generen venta caliente, disparadas desde Wi-Fi, Roll ups ó cualquier otro material gráfico o audiovisual. 
- 
 					<p>Realizamos proyectos en función de las necesidades de cada cliente, generando mixes de comunicación corporativa,  publicitaria y branding, pudiendo trabajar con contenidos propios o generar un medio adicional monetizable.
 				</div>
 			</div>
 		</div>	
 		<div class="row">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-7">
-                        	<iframe height="65%" width="100%" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/abrbQ2FB99k?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.1.1.$SITE_PAGES.$cee5.1.$i2hzw0ol.2.0"></iframe>
+			<div class="col-md-4"></div>
+			<div class="col-md-7">
+				<iframe height="65%" width="100%" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/abrbQ2FB99k?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.1.1.$SITE_PAGES.$cee5.1.$i2hzw0ol.2.0"></iframe>
 			</div>
-                </div>
+    </div>
 		<div class="separadorHorizontal"></div>	
 		<div class="row">
 			<div class="col-md-3"></div>
@@ -285,37 +250,27 @@ llegando a los consumidores en momentos claves del proceso de decisión de compr
 				<div>
 					<p>Es una herramienta para la recolección de información, que permite desde reporte online de las acciones, pasando por reportes segmentados de entrega de contenido según zona geográfica, edad y sexo, así como proyecciones sobre variables específicas y conteos de acciones cerradas orientado a la toma de decisiones integrada con todos los productos SQ AdMobile.
 				</div>
-
 			</div>
 		</div>
 		<div class="row">
-                        <div class="col-md-3"></div>
-                        <div class="col-md-9">
-                                <div><h4>SQ Business Inteligence</h4></div>
-                                <div class="yellowLine"></div>
-                                <div>
+			<div class="col-md-3"></div>
+			<div class="col-md-9">
+				<div><h4>SQ Business Inteligence</h4></div>
+				<div class="yellowLine"></div>
+				<div>
 					<p>Permite ofrecer una experiencia multimedio, con contenido dinámico y segmentados disparada desde medios tradicionales, teniendo la posibilidad de realizar mediciones discriminando medio de origen (TV, gráfica, etc.) interacciones en múltiples medios y cierre de acciones en punto de venta con verificación de validez de promociones e integración con POS.
-                                </div>
-
-                        </div>
-                </div>
+				</div>
+			</div>
+		</div>
 	</script>
-
 	<script id="foot_view_template" type="text/template">
 		<div class="footer"> 
 			<div>Apoyan y partrocinan: </div>
-		
 			<div ><img alt="" style="width: 173px; height: 43px; object-fit: cover;" src="images/cuti.png" ></div>
-		
 			<div ><img alt="" style="width: 183px; height: 95px; object-fit: cover;" src="images/cie.jpg"></div>
-		
 			<div ><img alt="" style="width: 88px; height: 66px; object-fit: cover;" src="images/da_vinci.jpg"></div>
 		</div>
-
 	</script>
-
-
-
 	<div id="main_layout">
 	</div>
 <body>
