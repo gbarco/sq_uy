@@ -1,103 +1,90 @@
 require.config({
-        waitSeconds: 50,
-        paths:{
-                "jquery": "http://code.jquery.com/jquery-1.11.3.min",
-                "underscore":"https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min",
-		"backbone":"https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min",
-		"marionette":"http://marionettejs.com/downloads/backbone.marionette.min",
-		"bootstrap":"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min"
-        },
-        shim:{
-		"underscore":{
-			exports:'_'
+	waitSeconds: 50,
+	paths: {
+		"jquery": "http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min",
+		"underscore": "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min",
+		"backbone": "https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.1/backbone-min",
+		"marionette": "http://marionettejs.com/downloads/backbone.marionette.min",
+		"bootstrap": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min"
+	},
+	shim: {
+		"underscore": {
+			exports: '_'
 		},
-                "backbone":{
-			deps:["jquery","underscore"],
-			exports:"Backbone"
+		"backbone": {
+			deps: ["jquery", "underscore"],
+			exports: "Backbone"
 		},
-		"marionette":{
-			deps:["underscore","jquery","backbone"],
-			exports:"Marionette"
+		"marionette": {
+			deps: ["underscore", "jquery", "backbone"],
+			exports: "Marionette"
 		},
-		"bootstrap":{
-			deps:["jquery"],
-			exports:"Bootstrap"	
+		"bootstrap": {
+			deps: ["jquery"],
+			exports: "Bootstrap"
 		}
-        }
+	}
 });
 
-require(["jquery","underscore","backbone","marionette","bootstrap"],function($,_,Backbone, Marionette,Bootstrap){
-
+require(["jquery", "underscore", "backbone", "marionette", "bootstrap"], function($, _, Backbone, Marionette, Bootstrap) {
 	var MyApp = new Marionette.Application();
 
 	var AppLayoutView = Backbone.Marionette.LayoutView.extend({
-		el : "#main_layout",
-		template : "#layout_view_template",
-		initialize : function(){
+		el: "#main_layout",
+		template: "#layout_view_template",
+		initialize: function() {
 
 		},
 		regions: {
 			head: "#head",
-    			menu: "#menu",
-    			content: "#content",
+			menu: "#menu",
+			content: "#content",
 			foot: "#foot"
-  		},
-		events:{
 		},
-		hola:function(){
+		events: {},
+		hola: function() {
 			alert('Hola');
 		},
-		
-
 	});
 
 	var HeadView = Backbone.Marionette.ItemView.extend({
-		initialize : function(){
-		},
-		template:"#head_view_template",
-		events:{
-		}
+		initialize: function() {},
+		template: "#head_view_template",
+		events: {}
 	});
-	
-	var MenuView = Backbone.Marionette.ItemView.extend({
-		template:"#menu_view_template",
-		events:{
-			"click li#somos":"goSomos"
-		},
-		goSomos:function(){
-			
-			myRouter.navigate("somos",true);
-		}
 
+	var MenuView = Backbone.Marionette.ItemView.extend({
+		template: "#menu_view_template",
+		events: {
+			"click li#somos": "goSomos"
+		},
+		goSomos: function() {
+			myRouter.navigate("somos", true);
+		}
 	});
 
 	var HomeView = Backbone.Marionette.ItemView.extend({
-		initialize : function(){
-		},
-		template:"#home_view_template",
-		events:{
-		}
+		initialize: function() {},
+		template: "#home_view_template",
+		events: {}
 	});
 
 	var SomosView = Backbone.Marionette.ItemView.extend({
-		template:"#somos_view_template"
+		template: "#somos_view_template"
 	});
-	
+
 	var Que_haView = Backbone.Marionette.ItemView.extend({
-		template:"#que_ha_view_template"
+		template: "#que_ha_view_template"
 	});
 
 	var ContactoView = Backbone.Marionette.ItemView.extend({
-		template:"#contacto_view_template"
+		template: "#contacto_view_template"
 	});
 
-
 	var FootView = Backbone.Marionette.ItemView.extend({
-		initialize : function(){
-		},
-		template:"#foot_view_template",
-		events:{
-		}
+		initialize: function() {},
+		template: "#foot_view_template",
+		events: {}
 	});
 
 	layout = new AppLayoutView();
@@ -107,7 +94,6 @@ require(["jquery","underscore","backbone","marionette","bootstrap"],function($,_
 	fView = new FootView();
 	//Paginas particulares
 	homeView = new HomeView();
-
 
 	var MyController = Marionette.Controller.extend({
 		home: function() {
@@ -120,43 +106,40 @@ require(["jquery","underscore","backbone","marionette","bootstrap"],function($,_
 			this._removeMenuSelectedClass();
 			$('#somos a').addClass("selected").find("span").addClass("selected");
 		},
-		contacto : function(){
+		contacto: function() {
 			layout.getRegion("content").show(new ContactoView());
 			this._removeMenuSelectedClass();
 			$('#contacto a').addClass("selected").find("span").addClass("selected");
 		},
-		que_ha : function(){
+		que_ha: function() {
 
-			layout.getRegion("content").show(new Que_haView());  
+			layout.getRegion("content").show(new Que_haView());
 			this._removeMenuSelectedClass();
 			$('#que_ha a').addClass("selected").find("span").addClass("selected");
 		},
-		_removeMenuSelectedClass:function(){
+		_removeMenuSelectedClass: function() {
 			$(".nav-justified>li a").removeClass("selected").find("span").removeClass("selected");
-			
+
 		}
-	
+
 	});
-			
-		
-		//Render inicial
+
+	//Render inicial
 	layout.render()
 	layout.getRegion("head").show(hView);
 	layout.getRegion("menu").show(mView);
 	layout.getRegion("content").show(homeView);
 	layout.getRegion("foot").show(fView);
 	//var myRouter = new MyRouter({controller: ctrl});
-	var ctrl = new MyController(); 
+	var ctrl = new MyController();
 	myRouter = new Marionette.AppRouter({
 		controller: ctrl,
 		appRoutes: {
 			"": "home",
 			"somos": "somos",
 			"contacto": "contacto",
-			"que_ha" : "que_ha"
-	  	}
+			"que_ha": "que_ha"
+		}
 	});
 	Backbone.history.start();
 });
-
-
