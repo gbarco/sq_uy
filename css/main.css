@@ -1,135 +1,33 @@
-.buttonLine {
-	height: 1px;
-	width: 100%;
-	display: block;
-	/**z-index: 10;*/
-	background-color:grey;
+.buttonLine{height:1px;width:100%;display:block;background-color:grey;}
+.nav>li>a:hover>.buttonLine{height:4px;width:100%;}
+.nav{margin-bottom:50px;}
+a{text-decoration:none;/}
+.nav-justified>li>a{text-align:left;color:gray;font:normal normal normal 17px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;}
+.nav-justified>li>a.selected{color:rgba(233, 153, 31, 1);}
+.nav>li>a:focus, .nav>li>a:hover{text-decoration:none;background-color:#FFF;}
+.buttonLine.selected{height:4px;background-color:rgba(233, 153, 31, 1);}
+.homePage{background-color:grey;background-image:url('../images/index_main_image.jpg');background-size:cover;}
+.homePageText{width:56%;color:#EEE;padding-top:50px;height:425px;padding-left:1.5%;font:normal normal normal 18px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;}
+.yellowLine{width:100%;background-color:rgba(233, 153, 31, 1);height:1px;display:block;margin-bottom:4px;}
+.footer div{display:inline;padding:1.88888888%;}
+.footer{text-align:center;margin-top:35px;margin-bottom:35px;}
+.central_derecha{width:75%;text-align:-webkit-center;}
+.inside{width:55%;text-align:-webkit-center;}
+.inside>span{display:inline-table;text-align:justify;padding:1.5%;}
+.qSomos{float:left;font-size:large;font-variant:initial;background-color:rgba(233, 153, 31, 1);color:white;padding-left:1.2%;padding-right:1.2%;width:22.87%;text-align:left;}
+.somos{text-align:-webkit-right;}
+.titulo{font-size:x-large;font-weight:600;}
+.cursiva{font-style:oblique;}
+.map{width:75%;text-align:-webkit-right;margin-left:23%;}
+.formulario_email{text-align:left;}
+.separadorHorizontal{height:30px;}
+.dropdown:hover .dropdown-menu{display:block;}
+@media (min-width:1200px){.container{width:970px;}
 }
-.nav>li>a:hover>.buttonLine{
-	height: 4px;
-	width: 100%;
+@media (max-width:1000px){.central_derecha{width:100%;}
+.inside{width:100%;}
+.qSomos{width:100%;}
+.map{margin-left:0;}
 }
-.nav{
-	margin-bottom:50px;
-}
-a{
-	text-decoration: none;
-	/* color:gray;*/
-}
-.nav-justified>li>a {
-	text-align: left;
-	color:gray;
-	font: normal normal normal 17px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
-}
-.nav-justified>li>a.selected{
-	color: rgba(233, 153, 31, 1);
-}
-.nav>li>a:focus, .nav>li>a:hover {
-	text-decoration: none;
-	background-color: #FFF;
-}
-.buttonLine.selected{
-	height: 4px;
-	background-color: rgba(233, 153, 31, 1);
-}
-.homePage{
-	background-color: grey;
-	background-image: url('../images/index_main_image.jpg');
-	background-size: cover;
-}
-.homePageText{
-	width:56%;
-	color:#EEE;
-	padding-top: 50px;
-	height: 425px;
-	padding-left: 1.5%;
-	font: normal normal normal 18px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;
-}
-.yellowLine {
-	width:100%;
-	background-color: rgba(233, 153, 31, 1);
-	height: 1px;
-	display: block;
-	margin-bottom:4px;
-}
-.footer div{
-	display:inline;
-	padding:1.88888888%;
-}
-.footer {
-	text-align: center;
-	margin-top: 35px;
-	margin-bottom: 35px;
-}
-.central_derecha{
-	width:75%;
-	text-align:-webkit-center;
-}
-.inside{
-	width:55%;
-	text-align:-webkit-center;
-}
-.inside>span{
-	display:inline-table;
-	text-align:justify;
-	padding:1.5%;
-}
-.qSomos{
-	float: left;
-	font-size: large;
-	font-variant: initial;
-	background-color: rgba(233, 153, 31, 1);
-	color: white;
-	adding-left:1.2%;
-	padding-right:1.2%;
-	width:22.87%;
-	text-align:left;
-}
-.somos{
-	text-align:-webkit-right;
-}
-.titulo{
-	font-size: x-large;
-	font-weight: 600;
-}
-.cursiva{
-	font-style: oblique;
-}
-.map{
-	width: 75%;
-	text-align:-webkit-right;
-	margin-left:23%;
-}
-.formulario_email{
-	text-align:left;
-}
-.separadorHorizontal{
-	height:30px;
-}
-.dropdown:hover .dropdown-menu {
-	display: block;
-}
-@media (min-width: 1200px){
-	.container {
-		width: 970px;
-	}
-}
-@media (max-width: 1000px){
-	.central_derecha{
-		width:100%;
-	}
-	.inside{
-		width:100%;
-	}
-	.qSomos{
-		width:100%;
-	}
-	.map{
-		margin-left:0;
-	}
-}
-@media (max-width: 600px){
-	.homePageText {
-		width: 100%;
-	}
+@media (max-width:600px){.homePageText{width:100%;}
 }
