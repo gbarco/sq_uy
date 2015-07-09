@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.18/require.min.js" data-main="js/main" ></script>
@@ -7,6 +7,19 @@
 	<meta charset="UTF-8">
 </head>
 <body>
+	<div class="preload">
+		<script type="text/javascript">
+			if (document.images) {
+				[
+				 'http://sq.uy/images/sq_logo.png',
+				 'http://sq.uy/images/index_main_image.jpg',
+				 'http://sq.uy/images/cuti.png',
+				 'http://sq.uy/images/cie.jpg',
+				 'http://sq.uy/images/da_vinci.jpg'
+				].foreach(function(s) {i=new Image(); img.src=s});
+			}
+		</script>
+	</div>
 	<script id="layout_view_template" type="text/template">
 		<div id="allLayout" class="container">
 			<div id="head"></div>
@@ -16,18 +29,18 @@
 		</div>
 	</script>
 	<script id="head_view_template" type="text/template">
-	  <div><img src="images/sq_logo.png"></div>
+		<div><img src="images/sq_logo.png"></div>
 	</script>
 	<script id="menu_view_template" type="text/template">
 		<div>
 			<ul class="nav nav-justified">
 				<li id="home"><a href="#" class="selected"><span class="buttonLine selected"></span> Home </a></li>
-				<li id="somos" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#somos" role="button" aria-expanded="false"><span class="buttonLine"></span>	Quienes somos 
-					</a><ul class="dropdown-menu col-xs-11 col-sm-12" role="menu"><li id="contacto"><a href="#contacto"><span class="buttonLine"></span>Contacto</a></li></ul>	
+				<li id="somos" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#somos" role="button" aria-expanded="false"><span class="buttonLine"></span>	Quienes somos
+					</a><ul class="dropdown-menu col-xs-11 col-sm-12" role="menu"><li id="contacto"><a href="#contacto"><span class="buttonLine"></span>Contacto</a></li></ul>
 				</li>
 				<li id="que_ha"><a href="#que_ha"><span class="buttonLine"></span> Que hacemos</a></li>
 			</ul>
-		</div> 
+		</div>
 	</script>
 	<script id="home_view_template" type="text/template">
 		<div class="homePage">
@@ -48,7 +61,7 @@
 				<div class="col-md-9">
 					<span class="titulo cursiva">
 						"Ofrecer contenidos dinámicos y personalizados desde medios tradicionales fue unos de los primeros desafíos..."
-					</span>	
+					</span>
 					<span class="subtitulo">
 						<h4>Tenemos espíritu emprendedor, creatividad, innovación y pasión por lo que hacemos.</h4>
 					</span>
@@ -65,30 +78,29 @@
 									</a>
 									<a href="https://twitter.com/pablotrysker" target="_blank">
 										<div style="width:16px;height:16px;display:inline"><img alt="" style="width:16px;height:16px;object-fit:cover;" src="images/twitter.png"></div>
-									</a>	
-								</div>	
+									</a>
+								</div>
 							</span>
 						</div>
 						<div class="col-md-4">
 							<span>
-								<img alt="" style="width: 146px; height: 153px; object-fit: cover;" src="images/gonzalo_barco.jpg"/>			
+								<img alt="" style="width: 146px; height: 153px; object-fit: cover;" src="images/gonzalo_barco.jpg"/>
 								<div>
 									<span style="color:rgba(233, 153, 31, 1)"><p><h4><strong>Gonzalo Barco</strong></h4></span>
 									<p><h4>Head of Archicteture</h4>
 									<a href="http://uy.linkedin.com/in/gonzalobarco" target="_blank">
 										<div style="width:16px;height:16px;display:inline;"><img alt="" style="width:16px;height:16px;object-fit:cover;" src="images/linkedin.png"></div>
 									</a>
-								</div>	
+								</div>
 							</span>
 						</div>
 					</div>
-					<div class="separadorHorizontal"></div>	
+					<div class="separadorHorizontal"></div>
 					<div class="row">
 						<div class="col-md-3"></div>
 						<div class="col-md-7">
 							<span style="text-align:justify;">
-								<p>Somos un equipo con más de 15 años de experiencia en publicidad exterior, planificación de medios y ventas corporativas en empresas multinacionales. 
-		
+								<p>Somos un equipo con más de 15 años de experiencia en publicidad exterior, planificación de medios y ventas corporativas en empresas multinacionales.
 								<p>Un equipo con visión de futuro, que trabaja dia a dia ofreciendo innovacion y creatividad aplicada para el mercado publicitario.
 							</span>
 						</div>
@@ -113,7 +125,7 @@
 					</div>
 					<div class="row">
 						<div class="row">
-							<div class="col-md-6">	
+							<div class="col-md-6">
 								<span id="bandera_argentina"><img alt="" style="width: 85px; height: 85px; object-fit: cover;" src="images/argball.jpg" ></span>
 								<span id="bandera_brasil"><img alt="" style="width: 85px; height: 85px; object-fit: cover;" src="images/braball.png" ></span>
 							</div>
@@ -140,25 +152,25 @@
 							<div class="col-md-4">
 								<div class="row">
 									<input type="text" name="nombre" class="form-control col-md-12" placeholder="Nombre" aria-describedby="sizing-addon1">
-								</div>	
+								</div>
 								<div class="row">
 									<input type="text" name="email" class="form-control col-md-12" placeholder="Email" aria-describedby="sizing-addon1">
-								</div>	
+								</div>
 								<div class="row">
 									<input type="text" name="telefono" class="form-control col-md-12" placeholder="Telefono" aria-describedby="sizing-addon1">
 								</div>
 							</div>
 							<div class="col-md-4">
-								<textarea class="form-control col-md-12" placeholder="Mensaje" rows="4" cols="50"></textarea>					
+								<textarea class="form-control col-md-12" placeholder="Mensaje" rows="4" cols="50"></textarea>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-6"></div>
 							<div class="col-md-2">
-								<button type="submit" class="form-control btn btn-primary" form="envioMail" value="submit">Envíar</button>	
+								<button type="submit" class="form-control btn btn-primary" form="envioMail" value="submit">Envíar</button>
 							</div>
-						</div>	
-					</form>	
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -170,7 +182,7 @@
 				<div><h4>Qué hacemos</h4></div>
 				<div class="yellowLine"></div>
 				<div>
-				<p>SQ AdMobile es una plataforma publicitaria innovadora e inteligente que vehiculiza público desde medios tradicionales y puntos wifi a una experiencia Mobile, ofreciendo contenido personalizado, dinámico y microsegmentado. 
+				<p>SQ AdMobile es una plataforma publicitaria innovadora e inteligente que vehiculiza público desde medios tradicionales y puntos wifi a una experiencia Mobile, ofreciendo contenido personalizado, dinámico y microsegmentado.
 				<p>La plataforma trabaja generando una nueva unidad de negocios, monetizando la segunda pantalla y potenciando de esta forma al medio.
 Desarrollamos una herramienta que potencia la inversión de nuestros clientes en medios tradicionales.
 				</div>
@@ -188,7 +200,7 @@ llegando a los consumidores en momentos claves del proceso de decisión de compr
 				<div class="yellowLine"></div>
 				<div>
 					<p>SQ Wifi permite ofrecer productos y/o servicios generando promociones o acciones de fidelización de clientes, monetizar el servicio vendiendo los espacios publicitarios como un medio y recoger información de la interacción de los usuarios con la plataforma para Business Inteligence.
-					<p>SQ Wifi es una herramienta publicitaria, de marketing y de medición. 
+					<p>SQ Wifi es una herramienta publicitaria, de marketing y de medición.
 					<i>Marketing :</i> esta permite realizar promociones, generar cupones de descuento digitales, fidelizar clientes, detectando concurrencia en un período de tiempo, realizar acciones de venta caliente.
 					<p><i>Publicitaria:</i> ofrece en los moviles de los consumidores publicidad personalizada, segmenta al público objetivo (por perfil: edad y sexo), utiliza contenido dinámico (por día u horarios) y multiplexa espacios de venta a distintos anunciantes.
 					<p><i>Medición:</i> captura y procesa datos estadísticos, permite conocer el perfil de los consumidores, conocer la habitualidad de los consumidores, conocer hábitos de consumo y traslado dentro de un espacio.
@@ -201,16 +213,16 @@ llegando a los consumidores en momentos claves del proceso de decisión de compr
 				<iframe height="auto" width="100%" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/EFktVgl8U1Y?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.1.1.$SITE_PAGES.$cee5.1.$i2hxibfo.2.0"></iframe>
 			</div>
 		</div>
-		<div class="separadorHorizontal"></div>	
+		<div class="separadorHorizontal"></div>
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-9">
 				<div><h4>SQ Tv</h4></div>
 				<div class="yellowLine"></div>
 				<div>
-					<p>SQ Tv, permite entre otras posibilidades suplantar el uso de sms como medio de interacción con el público, en encuestas, búsquedas de opinión o votaciones. 
+					<p>SQ Tv, permite entre otras posibilidades suplantar el uso de sms como medio de interacción con el público, en encuestas, búsquedas de opinión o votaciones.
 					<p>El público participa en forma gratuita de la interacción sin costo, recibiendo un contenido ó impacto publicitario personalizado según su perfil, geolocalización u opinión.
-					<p>Son los anunciantes que quieren llegar a los móviles de su público objetivo quienes abonan solo por los contactos efectivos que logren. 
+					<p>Son los anunciantes que quieren llegar a los móviles de su público objetivo quienes abonan solo por los contactos efectivos que logren.
 					<p>Para la producción o medio surge la posibilidad de aprovechamiento eficiente del canal de comunicación, no sólo a partir de la monetización, sino a través de la información que se genera de la interacción de los usuarios con la plataforma pudiendo entre otras cosas realizar medición de audiencia por perfiles.
 					<p>Probá esta DEMO con tu móvil
 				</div>
@@ -221,8 +233,8 @@ llegando a los consumidores en momentos claves del proceso de decisión de compr
 			<div class="col-md-7">
 				<iframe height="auto" width="100%" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/VvJUE6QedSc?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.1.1.$SITE_PAGES.$cee5.1.$i2hzlwbu.2.0"></iframe>
 			</div>
-		</div>	
-		<div class="separadorHorizontal"></div>	
+		</div>
+		<div class="separadorHorizontal"></div>
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-9">
@@ -230,18 +242,18 @@ llegando a los consumidores en momentos claves del proceso de decisión de compr
 				<div class="yellowLine"></div>
 				<div>
 					<p>Brindamos soluciones a medida para puntos de venta y grandes superficies, siempre utilizando el móvil como medio para personalizar contenidos y generar efectiva comunicación directa.
-					<p>Pudiendo de esta manera realizar todo tipo de acciones de marketing, programa de fidelización y lanzar acciones que generen venta caliente, disparadas desde Wi-Fi, Roll ups ó cualquier otro material gráfico o audiovisual. 
-					<p>Realizamos proyectos en función de las necesidades de cada cliente, generando mixes de comunicación corporativa,  publicitaria y branding, pudiendo trabajar con contenidos propios o generar un medio adicional monetizable.
+					<p>Pudiendo de esta manera realizar todo tipo de acciones de marketing, programa de fidelización y lanzar acciones que generen venta caliente, disparadas desde Wi-Fi, Roll ups ó cualquier otro material gráfico o audiovisual.
+					<p>Realizamos proyectos en función de las necesidades de cada cliente, generando mixes de comunicación corporativa,	publicitaria y branding, pudiendo trabajar con contenidos propios o generar un medio adicional monetizable.
 				</div>
 			</div>
-		</div>	
+		</div>
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-7">
 				<iframe height="65%" width="100%" allowfullscreen="" frameborder="0" src="http://www.youtube.com/embed/abrbQ2FB99k?wmode=transparent&amp;autoplay=0&amp;theme=dark&amp;controls=1&amp;autohide=0&amp;loop=0&amp;showinfo=0&amp;rel=0&amp;playlist=false&amp;enablejsapi=0" data-reactid=".0.$SITE_ROOT.$desktop_siteRoot.$PAGES_CONTAINER.1.1.$SITE_PAGES.$cee5.1.$i2hzw0ol.2.0"></iframe>
 			</div>
-    </div>
-		<div class="separadorHorizontal"></div>	
+		</div>
+		<div class="separadorHorizontal"></div>
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-9">
@@ -264,7 +276,7 @@ llegando a los consumidores en momentos claves del proceso de decisión de compr
 		</div>
 	</script>
 	<script id="foot_view_template" type="text/template">
-		<div class="footer"> 
+		<div class="footer">
 			<div>Apoyan y partrocinan: </div>
 			<div ><img alt="" style="width: 173px; height: 43px; object-fit: cover;" src="images/cuti.png" ></div>
 			<div ><img alt="" style="width: 183px; height: 95px; object-fit: cover;" src="images/cie.jpg"></div>
@@ -274,4 +286,3 @@ llegando a los consumidores en momentos claves del proceso de decisión de compr
 	<div id="main_layout">
 	</div>
 <body>
-
